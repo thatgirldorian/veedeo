@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class SearchBar extends React.Component {
     //initialize state 
     state = {term: ''}
@@ -12,6 +13,9 @@ class SearchBar extends React.Component {
     onFormSubmit = event => {
         //prevent automatic form submission
         event.preventDefault()
+
+        //call the props when the form is submitted
+        this.props.onFormSubmit(this.state.term)
     }
 
 
