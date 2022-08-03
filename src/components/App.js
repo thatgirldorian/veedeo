@@ -2,6 +2,7 @@ import React from "react";
 import SearchBar from './SearchBar'
 import youtubeApi from "../api/youtubeAPI"
 import VideoList from '../components/VideoList'
+import VideoDetail from "../components/VideoDetail"
 
 class App extends React.Component {
   //initialize state
@@ -20,7 +21,7 @@ class App extends React.Component {
 
   //add another callback to be called when a video is selected
   onVideoSelect = video => {
-    console.log("You clicked on a video", video)
+    this.setState({ selectedVideo: video })
   }
 
 
@@ -30,6 +31,7 @@ class App extends React.Component {
       <div className="ui container">
         <h1 className="ui violet header center aligned">veedeo.</h1>
         <SearchBar onFormSubmit={this.onTermSubmit} />
+        <VideoDetail video={this.state.selectedVideo} />
         <VideoList 
         onVideoSelect={this.onVideoSelect} 
         videos={this.state.videos} />
