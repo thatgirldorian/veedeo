@@ -3,10 +3,16 @@ import SearchBar from './SearchBar'
 import youtubeApi from "../api/youtubeAPI"
 import VideoList from '../components/VideoList'
 import VideoDetail from "../components/VideoDetail"
+import './App.css'
 
 class App extends React.Component {
   //initialize state
   state = { videos: [], selectedVideo: null } 
+
+  //create some default behavior on load
+  componentDidMount() {
+    this.onTermSubmit('sff books')
+  }
 
   //add a callback to be called every time a search query is submitted
   onTermSubmit = async (term) => {
@@ -16,7 +22,10 @@ class App extends React.Component {
       }
     })
 
-    this.setState({ videos: response.data.items })
+    this.setState({ 
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+    })
   }
 
   //add another callback to be called when a video is selected

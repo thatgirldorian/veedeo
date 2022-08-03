@@ -8,3 +8,8 @@
 .video-item.item img {
     max-width: 180px;
 }
+
+.title-link {
+    color: #480080 !important;
+}
+
