@@ -1,9 +1,9 @@
 # Veedeo
 
-This is an application that allows you to stream videos. It's built with React JS, Semantic UI and the YouTube API.
+This is an application that allows you to stream videos. It's built with React JS, Semantic UI and the YouTube API. 
 
 <h3>Issues faced:</h3>
-I'm strill trying to figure out why it's not working in production at the moment. 
+I'm still trying to figure out why it's not working in production at the moment. 
 
 <h3>Technology used:</h3>
 
@@ -14,6 +14,8 @@ I'm strill trying to figure out why it's not working in production at the moment
 
 
 <h3>Screenshare:</h3>
+https://user-images.githubusercontent.com/40691059/184201098-dd658d94-100a-43aa-8822-1de5cf3d5d14.mov
+
 
 # Getting Started with Create React App
 
